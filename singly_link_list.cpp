@@ -49,7 +49,6 @@ public:
      void insert_at_locat();
      void display();
      void Reverse();
-     void Search();
 
 };
 void SinglyLinkedList::create()
