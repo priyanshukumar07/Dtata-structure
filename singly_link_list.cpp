@@ -4,24 +4,28 @@ class node
 {
  public:
  int data;
- node *next,*ptr,*temp,*tail ;
+ node *next;
  node()
  {
    data=0;
    next=NULL;
-   temp=NULL;
-   ptr=NULL;
-   tail=NULL;
+   
  }
+  Node(int d, node *ptr=0)
+  {
+	  data=d;
+	  next=ptr;
+  }
  
 };
 
 class SinglyLinkedList
-{    public:
-    node *head;
+{   
+public:
+    node *head,*tail,*temp,*ptr;
     SinglyLinkedList()
     {
-        head=NULL;
+        head=tail=NULL;
     }
     ~SinglyLinkedList()
     {
@@ -192,15 +196,15 @@ void SinglyLinkedList::Reverse()
 }
 int main()
 {
-	int Choice;
+	int Option;
 	char ch;
 	SinglyLinkedList S;
 	do
 	{
-		cout << "\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Count the nodes\n9. Search\n10. Reverse the list\n11. Display\n12. Exit" << endl;
-		cout << "Enter your Choice : ";
-		cin >>Choice;
-		switch (Choice)
+		cout << "\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Count the nodes\n9. Display\n10. Exit" << endl;
+		cout << "Enter your Option : ";
+		cin >>Option;
+		switch (Option)
 		{
 		case 1:
 			S.create();
@@ -227,15 +231,9 @@ int main()
 			S.count();
 			break;
 		case 9:
-			S.Search();
-			break;
-		case 10:
-			S.Reverse();
-			break;
-		case 11:
 			S.display();
 			break;
-		case 12:
+		case 10:
 			exit(0);
 		}
 		cout << "\nWant to operate more? (y/n) ";
