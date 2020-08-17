@@ -186,10 +186,14 @@ void SinglyLinkedList::Reverse()
 {
   ptr=head->next;
   head->next=NULL;
+  head=tail;	
   while(ptr!=NULL)
-  {
+  {    temp=ptr;
       ptr=ptr->next;
+      temp->next = head;
+       head = temp;
   }
+	cout<<"node is reversed"<<endl;
   
   
 }
@@ -200,7 +204,7 @@ int main()
 	SinglyLinkedList S;
 	do
 	{
-		cout << "\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Count the nodes\n9. Display\n10. Exit" << endl;
+		cout << "\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Count the nodes\n9. Display\n10. Reverse\n11. Exit" << endl;
 		cout << "Enter your Option : ";
 		cin >>Option;
 		switch (Option)
@@ -233,6 +237,9 @@ int main()
 			S.display();
 			break;
 		case 10:
+			s.Reverse();
+			break;	
+		case 11:
 			exit(0);
 		}
 		cout << "\nWant to operate more? (y/n) ";
