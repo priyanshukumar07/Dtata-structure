@@ -184,14 +184,18 @@ void SinglyLinkedList::count()
 }
 void SinglyLinkedList::Reverse()
 {
+ if(head==NULL)
+ {
   ptr=head->next;
   head->next=NULL;
   head=tail;	
-  while(ptr!=NULL)
-  {    temp=ptr;
+   while(ptr!=NULL)
+   {    
+      temp=ptr;
       ptr=ptr->next;
       temp->next = head;
        head = temp;
+    }
   }
 	cout<<"node is reversed"<<endl;
   
