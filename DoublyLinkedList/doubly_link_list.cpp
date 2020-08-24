@@ -68,7 +68,7 @@ void DoublyLinkedList::del_from_end()
     cout<<"delted from end"<<endl;
 
 }
-void DoublyLinkedList::del_from_brgin()
+void DoublyLinkedList::del_from_begin()
 {
     if(head==tail)
     {
