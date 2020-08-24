@@ -49,6 +49,7 @@ public:
      void insert_at_locat();
      void display();
      void Reverse();
+     void search();
 
 };
 void SinglyLinkedList::create()
@@ -201,6 +202,32 @@ void SinglyLinkedList::Reverse()
   
   
 }
+void SinglyLinkedList::search()
+{
+	if (head==NULL)
+	{
+		int data;
+		int loc = 0;
+		bool contains = false;
+		cout << "Enter the node data to be searched : "<<endl;
+		cin >> data;
+		ptr = head;
+		while (ptr != NULL)
+		{
+			++loc;
+			if (ptr->data == data)
+			{
+				contains = true;
+				break;
+			}
+			ptr = ptr->next;
+		}
+		if (contains == 1)
+			cout << "Data found at location " << loc << " in the list." << endl;
+		else
+			cout << "Data not found in the list."<<endl;
+	}
+}
 int main()
 {
 	int Option;
@@ -208,7 +235,7 @@ int main()
 	SinglyLinkedList S;
 	do
 	{
-		cout << "\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Count the nodes\n9. Display\n10. Reverse\n11. Exit" << endl;
+		cout << "\n1. Create\n2. Insert at Beginning\n3. Insert at End\n4. Insert at Location\n5. Delete at Beginning\n6. Delete at End\n7. Delete at Location\n8. Count the nodes\n9. Display\n10. Reverse\n12.search\n12. Exit" << endl;
 		cout << "Enter your Option : ";
 		cin >>Option;
 		switch (Option)
@@ -242,8 +269,11 @@ int main()
 			break;
 		case 10:
 			s.Reverse();
-			break;	
+			break;
 		case 11:
+			s.search();
+			break;	
+		case 12:
 			exit(0);
 		}
 		cout << "\nWant to operate more? (y/n) ";
