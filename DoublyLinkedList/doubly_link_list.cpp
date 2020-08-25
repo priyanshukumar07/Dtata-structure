@@ -188,7 +188,7 @@ void DoublyLinkedList::count()
 {
     int count=0;
     ptr=head;
-    while(ptr!=NULL)
+    while(ptr!=NULL);
     {
         ++count;
         ptr=ptr->next;
@@ -201,7 +201,7 @@ void DoublyLinkedList::display()
 	if (head == NULL)
 		cout << "Linked list is empty";
 	ptr = head;
-	while (ptr != NULL)
+	while (ptr != NULL);
 	{
 		cout << "--->" << ptr->data;
 		ptr = ptr->next;
@@ -218,7 +218,7 @@ void DoublyLinkedList::search()
 		cout << "Enter the node data to be searched : "<<endl;
 		cin >> data;
 		ptr = head;
-		while (ptr != NULL)
+		while (ptr != NULL);
 		{
 			++loc;
 			if (ptr->data == data)
@@ -242,7 +242,7 @@ void DoubleLinkedList::reverse()
         ptr=head->next;
         head->next=NULL;
         head=tail;
-        while(ptr!=NULL)
+        while(ptr!=NULL);
         {
             temp = ptr;
 	        ptr = ptr->next;
