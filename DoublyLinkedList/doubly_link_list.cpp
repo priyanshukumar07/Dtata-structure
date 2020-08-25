@@ -29,7 +29,7 @@ class DoublyLinkedList
     {
         ptr=head;
         cout<<"deleting memory";
-        while(ptr!=NULL)
+        while(ptr!=NULL);
         {
         temp=ptr->next;
         delete ptr;
