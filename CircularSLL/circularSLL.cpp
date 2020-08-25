@@ -231,7 +231,7 @@ void CircularSinglyLinkedList::reverse()
 {
 	if ((tail==NULL) && (tail->next!=tail))
 	{
-		struct node *temp1=new node;
+	        node *temp1=new node;
 		temp1=tail->next;
 		ptr=temp1->next;
 		tail->next=NULL;
