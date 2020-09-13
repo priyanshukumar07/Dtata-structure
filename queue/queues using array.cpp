@@ -126,7 +126,7 @@ class queue
 
 int main(void)
 {
-	queue s1;
+	queue q1;
 	int opt,value;
 	do
 	{
@@ -148,22 +148,22 @@ int main(void)
 	    	case 1:
 	    		cout<<"Enter the element.";
 	    		cin>>value;
-	    		s1.enqueue(value);
+	    		q1.enqueue(value);
 	    		break;
 	    	case 2:
-	    		s1.dequeue();
+	    		q1.dequeue();
 	    		break;
 	    	case 3:
-	    		s1.clear();
+	    		q1.clear();
 	    		break;
 	    	case 4:
-	    		cout<<"No of element in the queue :"<<s1.count()<<endl;
+	    		cout<<"No of element in the queue :"<<q1.count()<<endl;
 	    		break;
 	    	case 5:
-	    		cout<<"peek element is :"<<s1.peek()<<endl;
+	    		cout<<"peek element is :"<<q1.peek()<<endl;
 	    		break;
 	    	case 6:
-	    		s1.display();
+	    		q1.display();
 	    		break;
 	    				
 		}
